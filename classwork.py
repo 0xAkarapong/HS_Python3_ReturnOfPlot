@@ -15,9 +15,9 @@ def f3(x):
 
 
 x = np.array(range(10))
-plt.plot(f1(x), label='x^2', color='green')
-plt.plot(f2(x), label='x * sin(2x)', color='red')
-plt.plot(f3(x), label='arctan(x)', color='blue')
+plt.plot(f1(x), label='x^2', color='green', linestyle='-', marker='o')
+plt.plot(f2(x), label='x * sin(2x)', color='red', linestyle='--', marker='s')
+plt.plot(f3(x), label='arctan(x)', color='blue', linestyle=':', marker='^')
 
 plt.title('Functions Visualization')
 plt.xlabel('X-axis')
