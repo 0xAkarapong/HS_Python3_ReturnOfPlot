@@ -14,7 +14,7 @@ def f3(x):
     return np.arctan(x)
 
 
-x = np.array(range(10))
+x = np.linspace(-10, 10, 100)
 plt.plot(f1(x), label='x^2', color='green', linestyle='-', marker='o')
 plt.plot(f2(x), label='x * sin(2x)', color='red', linestyle='--', marker='s')
 plt.plot(f3(x), label='arctan(x)', color='blue', linestyle=':', marker='^')
