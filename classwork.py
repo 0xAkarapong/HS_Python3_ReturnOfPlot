@@ -34,22 +34,32 @@ import pandas as pd
 #
 # plt.show()
 
-def bar_chart(x, y):
-    plt.bar(x, y)
-    plt.title('Bar Chart')
-    plt.xlabel('X-axis')
-    plt.ylabel('Y-axis')
+# def bar_chart(x, y):
+#     plt.bar(x, y)
+#     plt.title('Bar Chart')
+#     plt.xlabel('X-axis')
+#     plt.ylabel('Y-axis')
+#
+# value_for_bars = np.loadtxt('values_for_bars.csv', delimiter=',')
+# unique_values, counts = np.unique(value_for_bars, return_counts=True)
+#
+# plt.figure(figsize=(10, 6))
+# plt.bar(unique_values, counts, color="skyblue", edgecolor="black")
+# plt.title("Occurrences of Each Integer Value", fontsize=16)
+# plt.xlabel("Value", fontsize=14)
+# plt.ylabel("Count", fontsize=14)
+# plt.xticks(unique_values, rotation=45)
+# plt.grid(axis="y", linestyle="--", alpha=0.7)
+# plt.tight_layout()
+#
+# plt.show()
 
-value_for_bars = np.loadtxt('values_for_bars.csv', delimiter=',')
-unique_values, counts = np.unique(value_for_bars, return_counts=True)
-
+values = np.loadtxt('values_for_hist.csv', delimiter=',')
 plt.figure(figsize=(10, 6))
-plt.bar(unique_values, counts, color="skyblue", edgecolor="black")
-plt.title("Occurrences of Each Integer Value", fontsize=16)
+plt.hist(values, bins=10, edgecolor="black")
+plt.title("Histogram of Values", fontsize=16)
 plt.xlabel("Value", fontsize=14)
 plt.ylabel("Count", fontsize=14)
-plt.xticks(unique_values, rotation=45)
 plt.grid(axis="y", linestyle="--", alpha=0.7)
 plt.tight_layout()
-
 plt.show()
